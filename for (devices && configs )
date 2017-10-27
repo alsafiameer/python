@@ -1,0 +1,10 @@
+HOST = ["A","B","C"]
+
+CONFIG = ["config_A","config_B","congfig_C"]
+
+for H,C in zip(HOST,CONFIG):
+	print H
+
+	with open(C) as config:
+		for conf in config:
+			print conf.strip() + "\n"
