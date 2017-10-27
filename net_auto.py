@@ -7,6 +7,7 @@ user = raw_input("Enter your Username: ")
 login_pass = getpass.getpass("Type your login password: ")
 enable_pass = getpass.getpass("Type your enable password: ")
 
+#creat empty lists: 
 
 CORE_CONFIG = ["CORE_1","CORE_2"]
 ROUTER_CONFIG = ["R1","R2","R3"]
