@@ -2,14 +2,14 @@ import pexpect
 import getpass
 import sys
 
-
+USERNAME = raw_input('Type your username >')
 password = getpass.getpass('Enter your account password >')
 
 with open ('STP_SW') as f:
         for line in f:
                 HOST = line.strip()
                 print 'logging into ' + HOST
-                child = pexpect.spawn ('ssh cja5@' + HOST)
+                child = pexpect.spawn ('ssh ' + USERNAME + '@' + HOST)
                 out_put = child.expect (['(yes/no)' , 'password: '])
                 if out_put == 0:
                         child.sendline('yes')
